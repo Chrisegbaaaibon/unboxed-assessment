@@ -6,7 +6,7 @@ A RESTful API that extracts structured product data from any product URL using t
 
 - **URL:** [Your deployed API URL here]
 - **Method:** POST
-- **Endpoint:** `/api/parse-product`
+- **Endpoint:** `/api/parse-product-openai`
 
 ## Sample Request
 
