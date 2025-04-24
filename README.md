@@ -6,7 +6,7 @@ A RESTful API that extracts structured product data from any product URL using t
 
 - **URL:** [https://unboxed-assessment.onrender.com]
 - **Method:** POST
-- **Endpoint:** `/api/parse-product-openai`
+- **Endpoint:** `/api/parse-product`
 
 ## Sample Request
 
@@ -21,20 +21,37 @@ A RESTful API that extracts structured product data from any product URL using t
 
 ```json
 {
-  "url": "https://example.com/product/123",
-  "title": "Example Product",
-  "category": "Electronics",
-  "attributes": {
-    "colorOptions": ["Black", "White", "Silver"],
-    "sizeOptions": ["Small", "Medium", "Large"],
-    "specifications": {
-      "weight": "250g",
-      "dimensions": "12 x 8 x 2 cm"
+    "url": "https://now-time.biz/products/issue-1-whirlpool?variant=42480670539836",
+    "title": "Issue 1 Whirlpool",
+    "description": "Now-Time is a research and publishing project coordinating a multiplicity of historical lines oriented towards present activity. We aim to relink design,¹ critical consciousness, and social-historical perspective. With collaborators we create new works that move through the maze of what has been,² and transform those old works that speak indirectly but lucidly to the present situation.³\n\n¹ Design defined as courses of action aimed at changing existing situations into preferred ones.\n\n² Truth, questions and ideas in art / stories / evidence passed from the past, pleasant and unpleasant.\n\n³ The necessity of overcoming the icy waters of egotistical calculation.\n\nT̶h̶e̶ ̶f̶l̶o̶w̶i̶n̶g̶ ̶o̶f̶ ̶t̶i̶m̶e̶ The swirling of time\n\nWhat is...is dependent on what's in circulation. What stands, what is about to disappear, what should be no longer. Renewing whats been dragged to the bottom of the vortex. The what = useful ideas, questions, and truths in art / stories / evidence passed from the past.",
+    "brand": "Now-Time",
+    "price": {
+        "amount": 40,
+        "currency": "USD"
+    },
+    "images": [
+        "//now-time.biz/cdn/shop/files/White.gif?v=1737750961",
+        "//now-time.biz/cdn/shop/files/White_Front.jpg?v=1737750961",
+        "//now-time.biz/cdn/shop/files/White_Back.jpg?v=1737750961"
+    ],
+    "attributes": {
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "material": "100% Ring Spun Cotton",
+        "sleeve_type": "Short Sleeve",
+        "fabric_weight": "6.1oz",
+        "dye": "Garment Dyed",
+        "color": "White"
+    },
+    "metadata": {
+        "extractedAt": "2025-04-24T14:39:31.774Z",
+        "sourceUrl": "https://now-time.biz/products/issue-1-whirlpool?variant=42480670539836"
     }
-  },
-  "rawPrice": 29.99,
-  "brand": "Example Brand",
-  "description": "A high-quality example product with multiple features"
 }
 ```
 
