@@ -33,7 +33,7 @@ export const extractProductData = async (
     {
       "url": "product url",
       "title": "product title",
-      "description": "product description",
+      "description": "the summary of product description without the html tags",
       "brand": "brand name if available",
       "category": "product category if available",
       "price": {

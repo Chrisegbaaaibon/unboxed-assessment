@@ -26,6 +26,7 @@ export const extractProductDataGemini = async (
     4. Format price or amount as a number without currency symbols
     5. If multiple prices or amounts are present (sale price or amount, original price or amount), include them in the appropriate fields
     6. Make sure you include price / amount in the json data you will provide
+    7. Summarize the description without the html tags
     
     HTML:
     \`\`\`
@@ -38,7 +39,7 @@ export const extractProductDataGemini = async (
     {
       "url": "product url",
       "title": "product title",
-      "description": "product description",
+      "description": "the summary of product description without the html tags",
       "brand": "brand name if available",
       "category": "product category if available",
       "price": {
