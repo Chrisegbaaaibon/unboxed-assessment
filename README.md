@@ -4,7 +4,7 @@ A RESTful API that extracts structured product data from any product URL using t
 
 ## API Endpoint
 
-- **URL:** [Your deployed API URL here]
+- **URL:** [https://unboxed-assessment.onrender.com]
 - **Method:** POST
 - **Endpoint:** `/api/parse-product-openai`
 
@@ -12,8 +12,8 @@ A RESTful API that extracts structured product data from any product URL using t
 
 ```json
 {
-  "url": "https://example.com/product/123",
-  "openaiApiKey": "sk-..."
+    "url": "https://now-time.biz/products/issue-1-whirlpool?variant=42480670539836",
+    "openaiApiKey": "sk-...."
 }
 ```
 
@@ -42,7 +42,7 @@ A RESTful API that extracts structured product data from any product URL using t
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Chrisegbaaaibon/unboxed-assessment.git>
    cd unboxed-assessment
    ```
 
@@ -73,7 +73,7 @@ A RESTful API that extracts structured product data from any product URL using t
 
 ### Prompt Design
 
-The prompt for OpenAI's GPT-4 is designed to:
+The prompt for OpenAI is designed to:
 - Clearly define the task (extract product data)
 - Provide a specific output schema for consistency
 - Allow flexibility for different product types
@@ -103,11 +103,8 @@ Given the time constraints, the following trade-offs were made:
 2. **Caching**: No caching mechanism is implemented yet, which could improve performance and reduce API costs.
 3. **HTML processing**: Currently, we truncate HTML if it's too long, but a smarter approach would be to extract only relevant sections.
 4. **Rate limiting**: There's no rate limiting implemented to prevent abuse.
-5. **Testing**: Limited test coverage due to time constraints.
 
 Future improvements could include:
 - Implementing a caching layer to reduce OpenAI API calls
 - Adding more robust error handling and retries
 - Creating a smarter HTML pre-processor to extract only product-relevant sections
-- Adding user authentication and rate limiting
-- Supporting batch processing of multiple product URLs
