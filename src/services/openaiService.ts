@@ -12,14 +12,15 @@ export const extractProductData = async (
 
     const prompt = `
     You're an AI assistant specialized in extracting product information from HTML.
-    Extract all possible product data from the following HTML and structure it according to the JSON schema below.
+    Extract all possible product data and price from the following HTML and structure it according to the JSON schema below.
     
     For the schema:
     1. Don't include properties that aren't found in the HTML
     2. Add any additional product-specific attributes to the "attributes" object
     3. Try to identify color options, size options, materials, dimensions, etc.
-    4. Format price as a number without currency symbols
-    5. If multiple prices are present (sale price, original price), include them in the appropriate fields
+    4. Format price or amount as a number without currency symbols
+    5. If multiple prices or amounts are present (sale price or amount, original price or amount), include them in the appropriate fields
+    6. Make sure you include price / amount in the json data you will provide
     
     HTML:
     \`\`\`
@@ -51,7 +52,7 @@ export const extractProductData = async (
       }
     }
     
-    Return only the JSON object with no additional text.
+    Return only the valid JSON object with no additional text or explanation.
     `;
 
     const response = await openai.chat.completions.create({
